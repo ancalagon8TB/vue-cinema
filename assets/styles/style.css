@@ -1,0 +1,108 @@
+@import './reset.css';
+@import './fonts.css';
+@import './navbar/navbar.css';
+@import './main/main.css'; 
+:root {
+    --mon: 'Montserrat';
+    --rob: 'Roboto';
+    --com: 'Comfortaa';
+    --whiteColor: #fff;
+    --orangeColor: #F18128;
+    --primaryColor: #040D1F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+body {
+    background: var(--primaryColor);
+}
+
+.header__poster {
+    padding: 20px 0;
+    background: linear-gradient(135.00deg, rgb(56, 0, 175) 0%, rgb(191, 114, 4) 97.523%, rgb(194, 117, 0) 100%, rgb(194, 117, 0) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    height: 80px;
+}
+
+.header__poster span {
+    color: var(--whiteColor);
+    font-family: var(--com);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    max-width: 166px;
+}
+
+.header__poster img {
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.primary-btn {
+    border: none;
+    outline: none;
+    background: var(--primaryColor);
+    padding: 17px 48px;
+    border-radius: 4px;
+    transition: .5s;
+}
+
+.primary-btn span {
+    color:var(--whiteColor);
+    font-family: var(--rob);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 12px;
+    transition: .5;
+}
+.primary-btn:hover {
+    background: var(--orangeColor);
+    
+}
+.primary-btn:active {
+    transform: scale(.95);
+}
+.primary-btn:hover span{
+    color:var(--primaryColor);
+}
+
+.section__title {
+    color:var(--orangeColor);
+    font-family:var(--com);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 40px;
+    text-transform: capitalize;
+    border-bottom:2px solid var(--orangeColor) ;
+    max-width: max-content;
+    padding-bottom: 10px;
+}
